@@ -1,0 +1,27 @@
+This code trains a neural network to play Snake using either policy gradient or a genetic algorithm.
+When training with the genetic algorithm, the best model in the current generation is saved periodically every k generations (k=10 currently)
+The code was developed and tested using Python 3.11.
+
+Dependencies:
+Python 3.11
+numpy
+matplotlib
+torch
+os
+copy
+random
+re
+time
+sys
+
+Usage:
+Run training.ipynb to train a model with a genetic algorithm
+Run figures.ipynb and more_figures.ipynb to generate figures
+
+To watch a model play Snake:
+python watch_snake.py [model-file]
+
+NOTE:
+To change the state of the game, comment/uncomment the desired get_state function in snake_game.py,
+change the neural network input size in the train_genetic_algorithm function at geneticAlg.py line 47
+or change the neural network input size in the train_policy_gradient function at train.py line 65
